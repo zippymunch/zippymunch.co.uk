@@ -44,19 +44,46 @@
       }
   }
 
-        .logo { max-width: 250px; }
+       .logo {
+    transition: all 0.3s ease;
+    width: auto;
+    max-width: 250px; /* Desktop size */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 992px) {
+    .logo {
+        max-width: 160px !important;
+        padding: 8px 0;
+    }
+    
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        max-width: 120px !important;
+    }
+}
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Zippy Munch Logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" 
+                 alt="Zippy Munch" 
+                 class="logo img-fluid"
+                 style="max-width: 180px; height: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
