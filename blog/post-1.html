@@ -9,7 +9,30 @@
         .brand-color { color: #2c5f2d; }
         .blog-content { max-width: 800px; margin: 0 auto; }
         .blog-img { max-height: 400px; object-fit: cover; }
-         .logo { max-width: 250px; }
+         /* Default logo styles */
+.logo {
+    transition: all 0.3s ease;
+    width: auto;
+    max-width: 250px; /* Desktop size */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 992px) {
+    .logo {
+        max-width: 160px !important;
+        padding: 8px 0;
+    }
+    
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        max-width: 120px !important;
+    }
+}
     </style>
 </head>
 <body>
